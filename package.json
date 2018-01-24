@@ -1,0 +1,15 @@
+{
+  "name": "gltf-animations-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gltf-loader.js",
+  "scripts": {
+    "start": "which http-server && http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
