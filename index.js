@@ -49,6 +49,8 @@ function load() {
     loader.load(MESH_DATA_PATH, function(gltf) {
         const object = gltf.scene.getChildByName('Cube_0');
 
+        scene.add(new THREE.Mesh(object));
+
         mixer = new THREE.AnimationMixer(gltf.scene);
         gltf.animations.forEach(animation => {
           console.log(animation);
