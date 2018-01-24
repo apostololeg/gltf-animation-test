@@ -30,7 +30,7 @@ function init() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    renderer = new THREE.CanvasRenderer({ canvas: canvas });
+    renderer = new THREE.WebGLRenderer({ canvas: canvas });
     renderer.setSize(canvas.width, canvas.height);
     renderer.setClearColor(0x00007F, 1);
     renderer.autoClear = false;
