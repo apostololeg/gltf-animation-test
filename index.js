@@ -1,6 +1,6 @@
 'use strict';
 
-var MESH_DATA_PATH = '/models/cube.gltf';
+var MESH_DATA_PATH = '/models/monster.gltf';
 
 var scene, canvas, renderer, camera;
 var clock, mixer;
@@ -45,7 +45,7 @@ function init() {
 }
 
 function load() {
-    var loader = new THREE.GLTFLoader();
+    var loader = new THREE.LegacyGLTFLoader();
     loader.load(MESH_DATA_PATH, function(gltf) {
         const object = gltf.scene.getChildByName('Cube_0');
 
@@ -58,6 +58,10 @@ function load() {
         });
 
         loop();
+    }, function(progress) {
+        console.log(progress)
+    }, function(err) {
+        console.log(err)
     });
 }
 
